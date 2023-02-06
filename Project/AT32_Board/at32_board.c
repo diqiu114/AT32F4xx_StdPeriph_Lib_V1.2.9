@@ -17,30 +17,67 @@ namespace std
   extern "C" {
 #endif
 
-/* Suport printf function, useMicroLib is unnecessary */
-#ifdef __CC_ARM
+///* Suport printf function, useMicroLib is unnecessary */
+//#ifdef __CC_ARM
+//  #pragma import(__use_no_semihosting)
+//  struct __FILE
+//  {
+//    int handle;
+//  };
+//  
+//  FILE __stdout;
+//  
+//  void _sys_exit(int x)
+//  {
+//    x = x;
+//  }
+//#endif
+
+//#ifdef __GNUC__
+//  /* With GCC/RAISONANCE, small printf (option LD Linker->Libraries->Small printf
+//     set to 'Yes') calls __io_putchar() */
+//  #define PUTCHAR_PROTOTYPE int __io_putchar(int ch)
+//#else
+//  #define PUTCHAR_PROTOTYPE int fputc(int ch, FILE *f)
+//#endif /* __GNUC__ */
+/* support printf function, usemicrolib is unnecessary */
+#if (__ARMCC_VERSION > 6000000)
+  __asm (".global __use_no_semihosting\n\t");
+  void _sys_exit(int x)
+  {
+    x = x;
+  }
+  /* __use_no_semihosting was requested, but _ttywrch was */
+  void _ttywrch(int ch)
+  {
+    ch = ch;
+  }
+  FILE __stdout;
+#else
+ #ifdef __CC_ARM
   #pragma import(__use_no_semihosting)
   struct __FILE
   {
     int handle;
   };
-  
   FILE __stdout;
-  
   void _sys_exit(int x)
   {
     x = x;
   }
+  /* __use_no_semihosting was requested, but _ttywrch was */
+  void _ttywrch(int ch)
+  {
+    ch = ch;
+  }
+ #endif
 #endif
 
-#ifdef __GNUC__
-  /* With GCC/RAISONANCE, small printf (option LD Linker->Libraries->Small printf
-     set to 'Yes') calls __io_putchar() */
+#if defined (__GNUC__) && !defined (__clang__)
   #define PUTCHAR_PROTOTYPE int __io_putchar(int ch)
 #else
   #define PUTCHAR_PROTOTYPE int fputc(int ch, FILE *f)
-#endif /* __GNUC__ */
-
+#endif
 /**
   * @brief  Retargets the C library printf function to the USART.
   * @param  None
