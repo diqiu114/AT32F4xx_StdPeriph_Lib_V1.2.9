@@ -188,7 +188,7 @@
             <hadIRAM2>0</hadIRAM2>
             <hadIROM2>0</hadIROM2>
             <StupSel>8</StupSel>
-            <useUlib>1</useUlib>
+            <useUlib>0</useUlib>
             <EndSel>0</EndSel>
             <uLtcg>0</uLtcg>
             <nSecure>0</nSecure>
@@ -468,9 +468,9 @@
           <GroupName>Lcd</GroupName>
           <Files>
             <File>
-              <FileName>spi_dma.c</FileName>
+              <FileName>fonts.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\spi\spi_dma.c</FilePath>
+              <FilePath>..\lcd\fonts.c</FilePath>
             </File>
             <File>
               <FileName>st7789.c</FileName>
@@ -478,9 +478,9 @@
               <FilePath>..\lcd\st7789.c</FilePath>
             </File>
             <File>
-              <FileName>fonts.c</FileName>
+              <FileName>spi_dma.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\lcd\fonts.c</FilePath>
+              <FilePath>..\spi\spi_dma.c</FilePath>
             </File>
           </Files>
         </Group>

@@ -133,7 +133,8 @@ void ST7789_SetRotation(uint8_t m)
  * @param xi&yi -> coordinates of window
  * @return none
  */
-static void ST7789_SetAddressWindow(uint16_t x0, uint16_t y0, uint16_t x1, uint16_t y1)
+//static void ST7789_SetAddressWindow(uint16_t x0, uint16_t y0, uint16_t x1, uint16_t y1)
+void ST7789_SetAddressWindow(uint16_t x0, uint16_t y0, uint16_t x1, uint16_t y1)
 {
 	ST7789_Select();
 	uint16_t x_start = x0 + X_SHIFT, x_end = x1 + X_SHIFT;

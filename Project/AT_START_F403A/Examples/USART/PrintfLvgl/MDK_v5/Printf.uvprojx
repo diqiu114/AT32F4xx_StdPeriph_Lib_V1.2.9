@@ -338,7 +338,7 @@
               <MiscControls></MiscControls>
               <Define>AT32F403AVGT7,USE_STDPERIPH_DRIVER,AT_START_F403A_V1_0</Define>
               <Undefine></Undefine>
-              <IncludePath>..\..\..\..\..\..\Libraries\AT32F4xx_StdPeriph_Driver\inc;..\..\..\..\..\..\Libraries\CMSIS\CM4\CoreSupport;..\..\..\..\..\..\Libraries\CMSIS\CM4\DeviceSupport;..\..\Printf;..\..\..\..\..\AT32_Board;..\lcd;..\lv_sim_visual_studio\LVGL.Simulator\lvgl\src;..\lv_sim_visual_studio\LVGL.Simulator\lvgl\examples\porting;..\lv_sim_visual_studio\LVGL.Simulator\lvgl;..\lv_sim_visual_studio\LVGL.Simulator\lvgl\examples\styles;..\lv_sim_visual_studio\LVGL.Simulator\lvgl\examples;..\lv_sim_visual_studio\LVGL.Simulator\lvgl\demos</IncludePath>
+              <IncludePath>..\..\..\..\..\..\Libraries\AT32F4xx_StdPeriph_Driver\inc;..\..\..\..\..\..\Libraries\CMSIS\CM4\CoreSupport;..\..\..\..\..\..\Libraries\CMSIS\CM4\DeviceSupport;..\..\Printf;..\..\..\..\..\AT32_Board;..\lcd;..\lv_sim_visual_studio\LVGL.Simulator\lvgl\src;..\lv_sim_visual_studio\LVGL.Simulator\lvgl\examples\porting;..\lv_sim_visual_studio\LVGL.Simulator\lvgl;..\lv_sim_visual_studio\LVGL.Simulator\lvgl\examples\styles;..\lv_sim_visual_studio\LVGL.Simulator\lvgl\examples;..\lv_sim_visual_studio\LVGL.Simulator\lvgl\demos;..\..\PrintfLvgl</IncludePath>
             </VariousControls>
           </Cads>
           <Aads>
@@ -451,6 +451,16 @@
               <FileName>at32f4xx_spi.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\..\..\..\..\..\Libraries\AT32F4xx_StdPeriph_Driver\src\at32f4xx_spi.c</FilePath>
+            </File>
+            <File>
+              <FileName>at32f4xx_dac.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\..\..\..\..\Libraries\AT32F4xx_StdPeriph_Driver\src\at32f4xx_dac.c</FilePath>
+            </File>
+            <File>
+              <FileName>at32f4xx_dma.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\..\..\..\..\Libraries\AT32F4xx_StdPeriph_Driver\src\at32f4xx_dma.c</FilePath>
             </File>
           </Files>
         </Group>

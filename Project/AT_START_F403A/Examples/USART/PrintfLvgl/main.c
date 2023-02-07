@@ -11,7 +11,7 @@
 #include "at32f4xx.h"
 #include "at32_board.h"
 #include <stdio.h>
-#include "st7789.h"
+#include "./lcd/st7789.h"
 #include "lvgl.h"
 #include "lv_port_disp.h"
 #include "lv_port_indev.h"

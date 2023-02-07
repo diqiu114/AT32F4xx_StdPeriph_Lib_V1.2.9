@@ -11,7 +11,6 @@
 #include "at32f4xx.h"
 #include "at32_board.h"
 #include <stdio.h>
-#include "./Lcd/lcd.h"
 
 /** @addtogroup AT32F403A_StdPeriph_Examples
   * @{

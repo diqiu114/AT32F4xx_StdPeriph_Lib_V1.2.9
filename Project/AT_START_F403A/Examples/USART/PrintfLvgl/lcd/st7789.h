@@ -247,7 +247,7 @@ void ST7789_TearEffect(uint8_t tear);
 
 /* Simple test function. */
 void ST7789_Test(void);
-
+void ST7789_SetAddressWindow(uint16_t x0, uint16_t y0, uint16_t x1, uint16_t y1);
 //#if !defined(USING_240X240)
 //	#if !defined(USING_135X240)
 //	    #error 	You should at least choose one display resolution!

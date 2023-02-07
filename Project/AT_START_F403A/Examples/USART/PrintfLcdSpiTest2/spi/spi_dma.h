@@ -1,6 +1,7 @@
 #ifndef __SPI_DMA_H
 #define __SPI_DMA_H
 
+#include "stdint.h"
 
 #define DSPI2                   SPI2
 #define DSPI2_CLK               RCC_APB1PERIPH_SPI2
@@ -19,9 +20,13 @@
 #define DSPI1_PIN_MOSI          GPIO_Pins_7   // PA7
 
 
+#define DISP_DMA_CHANNEL     DMA1_Channel3
+#define DISP_DMA_MAX_SIZE    65535
 
 void Spi2DmaInit(void);
 void Spi1DmaInit(void);
+
+void Display_SPI_DMA_Send(const void* buf, uint32_t size);
 
 #endif
 
