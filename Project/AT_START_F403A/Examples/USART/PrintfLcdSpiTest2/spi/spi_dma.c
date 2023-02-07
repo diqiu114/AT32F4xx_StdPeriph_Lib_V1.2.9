@@ -181,7 +181,7 @@ static void Dspi1Init(void)
   SPI_InitStructure.SPI_CPOL = SPI_CPOL_LOW;
   SPI_InitStructure.SPI_CPHA = SPI_CPHA_1EDGE;
   SPI_InitStructure.SPI_NSSSEL = SPI_NSSSEL_SOFT;
-  SPI_InitStructure.SPI_MCLKP = SPI_MCLKP_4;
+  SPI_InitStructure.SPI_MCLKP = SPI_MCLKP_2;
   SPI_InitStructure.SPI_FirstBit = SPI_FIRSTBIT_MSB;
   SPI_InitStructure.SPI_CPOLY = 7;
 
